@@ -12,6 +12,11 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  gap: 5px;
+}
+
+.discount_card {
+  flex: 0 0 31.333333%;
 }
 
 .product_title {

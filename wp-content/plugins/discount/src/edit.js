@@ -31,7 +31,6 @@ import "./editor.scss";
  */
 export default function Edit() {
 	let products = JSON.parse(data.products);
-	console.log(products);
 	return (
 		<div {...useBlockProps()}>
 			<h2>Discount products edit</h2>

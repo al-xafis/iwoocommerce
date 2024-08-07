@@ -53,7 +53,6 @@ function enqueue_me() {
 
 	$products = json_encode($products);
 
-
 	wp_enqueue_script(
 		'create-block-discount',
 		plugins_url() . '/discount/src/edit.js'
@@ -65,6 +64,8 @@ function enqueue_me() {
 }
 
 add_action('enqueue_block_assets', 'enqueue_me');
+
+
 
 
 
