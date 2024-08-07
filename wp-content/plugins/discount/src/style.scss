@@ -5,8 +5,28 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-discount {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+// .wp-block-create-block-discount {
+// 	background-color: #21759b;
+// 	color: #fff;
+// 	padding: 2px;
+// }
+
+.discount_cards {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.product_title {
+	color: #000;
+}
+
+.product_price {
+	color: #a3a3a3;
+	text-decoration: line-through;
+}
+
+.product_sale_price {
+	color: #000;
 }

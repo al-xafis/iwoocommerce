@@ -33,8 +33,24 @@ export default function Edit() {
 	let products = JSON.parse(data.products);
 	console.log(products);
 	return (
-		<p {...useBlockProps()}>
-			{__("Discount – hello from the editor!", "discount")}
-		</p>
+		<div {...useBlockProps()}>
+			<h2>Discount products edit</h2>
+			<div className="discount_cards">
+				{products &&
+					products.map((product, i) => (
+						<div className="discount_card" key={i}>
+							<div
+								className="card__img"
+								dangerouslySetInnerHTML={{ __html: product["image"] }}
+							></div>
+							<div className="card__content">
+								<h4 className="product_title">{product["title"]}</h4>
+								<p className="product_price">{product["regular_price"]}</p>
+								<p className="product_sale_price">{product["sale_price"]}</p>
+							</div>
+						</div>
+					))}
+			</div>
+		</div>
 	);
 }

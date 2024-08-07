@@ -8,6 +8,11 @@
 	"icon": "smiley",
 	"description": "Block for discounted products.",
 	"example": {},
+	"attributes": {
+		"products": {
+			"type": "array"
+		}
+	},
 	"supports": {
 		"html": false
 	},

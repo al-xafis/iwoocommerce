@@ -50,9 +50,6 @@ function enqueue_me() {
 		$products[] = $details;
 		$details = [];
 	}
-	// echo '<pre>';
-	// var_dump($products);
-	// echo '</pre>';
 
 	$products = json_encode($products);
 

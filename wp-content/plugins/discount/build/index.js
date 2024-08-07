@@ -54,9 +54,27 @@ __webpack_require__.r(__webpack_exports__);
 function Edit() {
   let products = JSON.parse(data.products);
   console.log(products);
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Discount – hello from the editor!", "discount"));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "Discount products edit"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "discount_cards"
+  }, products && products.map((product, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "discount_card",
+    key: i
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "card__img",
+    dangerouslySetInnerHTML: {
+      __html: product["image"]
+    }
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "card__content"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", {
+    className: "product_title"
+  }, product["title"]), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "product_price"
+  }, product["regular_price"]), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "product_sale_price"
+  }, product["sale_price"]))))));
 }
 
 /***/ }),
@@ -148,9 +166,27 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 function save() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  let products = JSON.parse(data.products);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
-  }, 'Discount – hello from the saved content!');
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "Discount products"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "discount_cards"
+  }, products.map(product => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "discount_card"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "card__img",
+    dangerouslySetInnerHTML: {
+      __html: product["image"]
+    }
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "card__content"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", {
+    className: "product_title"
+  }, product["title"]), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "product_price"
+  }, product["regular_price"]), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "product_sale_price"
+  }, product["sale_price"]))))));
 }
 
 /***/ }),
@@ -225,7 +261,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/discount","version":"0.1.0","title":"Discount","category":"widgets","icon":"smiley","description":"Block for discounted products.","example":{},"supports":{"html":false},"textdomain":"discount","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/discount","version":"0.1.0","title":"Discount","category":"widgets","icon":"smiley","description":"Block for discounted products.","example":{},"attributes":{"products":{"type":"array"}},"supports":{"html":false},"textdomain":"discount","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
