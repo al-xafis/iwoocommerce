@@ -1,0 +1,60 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.d-none {
+  display: none;
+}
+
+.container_custom_selector {
+  cursor: pointer;
+}
+
+.content_item {
+  background-color: #ececec;
+  display: flex;
+}
+
+.content_img {
+  width: 200px;
+  height: 160px;
+}
+
+.content_title {
+  align-self: center;
+  margin-right: 10px;
+}
+
+.content_item:hover {
+  background-color: #0285e4;
+}
+
+.content_item:hover .content_title {
+  color: #fff;
+}
+
+.custom_selector {
+  position: relative;
+  width: 100%;
+  border: 1px solid black;
+  padding: 8px 16px;
+}
+
+.arrow::after {
+  position: absolute;
+  left: 0;
+  content: "❯";
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg) translateX(-8px);
+}
+
+.selector_content a {
+  text-decoration: none !important;
+}

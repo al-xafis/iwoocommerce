@@ -1,0 +1,57 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.d-none {
+	display: none;
+}
+
+.container_custom_selector {
+	cursor: pointer;
+}
+
+.content_item {
+	background-color: #ececec;
+	display: flex;
+}
+
+.content_img {
+	width: 200px;
+	height: 160px;
+}
+
+.content_title {
+	align-self: center;
+	margin-left: 10px;
+}
+
+.content_item:hover {
+	background-color: #0285e4;
+}
+
+.content_item:hover .content_title {
+	color: #fff;
+}
+
+.custom_selector {
+	position: relative;
+	width: 100%;
+	border: 1px solid black;
+	padding: 8px 16px;
+}
+
+.arrow::after {
+	position: absolute;
+	right: 0;
+	content: "\276F";
+	width: 16px;
+	height: 16px;
+	transform: rotate(90deg) translateX(8px);
+}
+
+.selector_content a {
+	text-decoration: none !important;
+}

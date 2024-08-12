@@ -264,6 +264,13 @@ if ( ! function_exists( 'hello_elementor_body_open' ) ) {
 	}
 }
 
+
+
+
+
+// AUTH
+////////////////
+
 function generate_token() {
 	return bin2hex(random_bytes(16));
 }
@@ -329,3 +336,4 @@ function custom_auth() {
 }
 
 add_action('template_redirect', 'custom_auth');
+
