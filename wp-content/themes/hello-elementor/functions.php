@@ -332,6 +332,10 @@ function custom_auth() {
 		} else {
 			wp_send_json_error(['message' => 'Invalid token']);
 		}
+	} else {
+		if (is_user_logged_in()) {
+			wp_logout();
+		}
 	}
 }
 
