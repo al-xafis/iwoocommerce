@@ -339,5 +339,5 @@ function custom_auth() {
 	}
 }
 
-// add_action('template_redirect', 'custom_auth');
+add_action('template_redirect', 'custom_auth');
 
